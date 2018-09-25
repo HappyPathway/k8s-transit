@@ -24,7 +24,7 @@ module "spring_transit" {
   version = "1.0.0"
 
   k8s_endpoint = "${data.terraform_remote_state.k8s.endpoint}"
-  k8s_master_auth_client_certificate = "${base64decode(data.terraform_remote_state.k8s.client_certificate)}"
-  k8s_master_auth_client_key = "${base64decode(data.terraform_remote_state.k8s.client_key)}"
-  k8s_master_auth_cluster_ca_certificate = "${base64decode(data.terraform_remote_state.k8s.cluster_ca_certificate)}" 
+  k8s_master_auth_client_certificate = "${data.terraform_remote_state.k8s.client_certificate}"
+  k8s_master_auth_client_key = "${data.terraform_remote_state.k8s.client_key}"
+  k8s_master_auth_cluster_ca_certificate = "${data.terraform_remote_state.k8s.cluster_ca_certificate}" 
 }
