@@ -21,7 +21,7 @@ data "terraform_remote_state" "k8s" {
 // Modules
 module "spring_transit" {
   source  = "app.terraform.io/Darnold-WalMart_Demo/spring-transit/k8s"
-  version = "1.0.0"
+  version = "1.2.0"
   username = "${data.terraform_remote_state.k8s.username}"
   password = "${data.terraform_remote_state.k8s.password}"
   k8s_endpoint = "${data.terraform_remote_state.k8s.endpoint}"
