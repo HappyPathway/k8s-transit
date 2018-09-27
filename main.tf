@@ -49,7 +49,7 @@ data "terraform_remote_state" "pgdb" {
 // Modules
 module "spring_transit" {
   source  = "app.terraform.io/Darnold-WalMart_Demo/spring-transit/k8s"
-  version = "1.3.0"
+  version = "1.4.0"
   k8s_master_auth_username = "${data.terraform_remote_state.k8s.username}"
   k8s_master_auth_password = "${data.terraform_remote_state.k8s.password}"
   k8s_endpoint = "${data.terraform_remote_state.k8s.endpoint}"
